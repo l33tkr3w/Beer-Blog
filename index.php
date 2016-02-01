@@ -1,5 +1,7 @@
 <?php
 require('host.php');
+require('user_registration.php');
+echo($_POST);
 ?>
 
 <html lang="en">
@@ -30,7 +32,7 @@ require('host.php');
             width: 300px !important;     
         }
     </style>
-
+    
     <body>
 
         <!-- NAVBAR -->
@@ -67,11 +69,11 @@ require('host.php');
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12" >                                      
-                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <form class="form" role="form" method="post" action="index.php" accept-charset="UTF-8" id="login-nav">
 
                                                 <div class="form-group">
                                                     <label class="sr-only" for="Username">Login</label>
-                                                    <input type="email" class="form-control" id="Username" placeholder="Username" required>
+                                                    <input type="text" class="form-control" id="Username" placeholder="Username" required>
                                                 </div>
 
                                                 <div class="form-group">
@@ -101,54 +103,54 @@ require('host.php');
                                 <li>
                                     <div class="row">
                                         <div class="col-md-12">                                      
-                                            <form action=""  method="POST" >
+                                            <form action="index.php"  method="POST" >
                                                 <div class="form-group">
                                                     <div id="data">
 
                                                         <table width="350px">
                                                             <tr> 
                                                                 <td valign="top"> 
-                                                                    <input type="text" class="form-control" id="firstname" placeholder="First Name" required>
+                                                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>   
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>
+                                                                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>  
                                                                 <td valign="top">
-                                                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
                                                                 </td>
                                                             <tr>  
                                                                 <td valign="top">
-                                                                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                                                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                                
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="address" placeholder="Street Address" required>
+                                                                    <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                              
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                                                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                                
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="state" placeholder="State" required>
+                                                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>                                                               
                                                                 <td valign="top">
-                                                                    <input type="text" class="form-control" id="zip" placeholder="Zipcode" required>
+                                                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="Zipcode" required>
                                                                 </td>
                                                             </tr>
 
@@ -177,6 +179,8 @@ require('host.php');
         <div class="video">
             <div class="responsive-video">
                 <video id="player" autoplay loop src="beer.mp4" height="100%" ></video>
+                              <a href="#tf-team" class="fa fa-angle-down page-scroll"></a>    
+
             </div>
         </div>
 
@@ -245,6 +249,9 @@ require('host.php');
             </div>
         </div>
     </div>
+        
+
+        
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -254,6 +261,10 @@ require('host.php');
     <script src="assets/js/jquery.prettyPhoto.js"></script>
     <script src="assets/js/jquery.isotope.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    
+    
+
+    
 
 </body>
 </html>

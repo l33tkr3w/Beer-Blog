@@ -1,32 +1,11 @@
 <?php
-
-require "host.php";
 print_r($_POST);
 
 if (isset($_POST['firstname'])) {
+    
+    echo ('Hello');    
     $pwd = $_POST['password'];
 
-//    //////// Check If User Name Exisits /////////////
-//
-//	
-//	//$sql_check = "Select username Where username Like :checkUser";
-//		$sql_check = "Select username From tbl_user Where username Like :checkUser";
-//	
-//	
-//	$checkUserName = filter_var($_POST['username'],FILTER_SANITIZE_STRING);
-//	$sql_checkh = $pdo->prepare($sql_check);
-//	$sql_checkh->bindparam(":checkUser",$checkUserName);
-//	$checkrow = $sql_checkh->execute();
-//	
-//	$checkrow = $sql_checkh->fetch();
-//	
-//	if($sql_checkh->rowCount()>0)
-//	{
-//		unset($_POST);
-//		header("Location: errorMessage.php");
-//	}
-//	
-//	////////////////////////////////////
     //create sql statement
     $sql_stmt = "INSERT INTO tbl_blog "
             . "(firstname, "
@@ -80,100 +59,10 @@ if (isset($_POST['firstname'])) {
 
     //excecute the sqlstatement
     $sqlh->execute();
+    echo('HELP');
 }
 
 //FORM      
 else {
-
-    echo"
-        <div id='data'>
-
-<form method='POST' action='user_registration.php' >
-            
-                <table width='450px'>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'firstname'>First Name *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'firstname' value = '' maxlength = '50' size = '30'>
-    </td>
-    </tr>
-
-    <tr>
-    <td valign = 'top'>
-    <label for = 'lastname'>Last Name *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'lastname' value = '' maxlength = '50' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'email'>Email Address *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'email' value = '' maxlength = '80' size = '30'>
-    </td>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'email'>Password *</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'password' name = 'password' value = '' maxlength = '80' size = '30'>
-    </td>
-
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>Address</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'address' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>City</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'city' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>State</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'state' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-    <tr>
-    <td valign = 'top'>
-    <label for = 'telephone'>Zip</label>
-    </td>
-    <td valign = 'top'>
-    <input type = 'text' name = 'zip' value = '' maxlength = '30' size = '30'>
-    </td>
-    </tr>
-
-    </tr>
-    <tr>
-    <td colspan = '2' style = 'text-align:center'>
-    <input type = 'submit' value = 'Submit'>
-    </td>
-    </tr>
-    </table>
-    
-
-    </form> 
-    
-    </div>";
-    
-    
-    
-    
-    
 }
 ?>
